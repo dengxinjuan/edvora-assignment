@@ -8,7 +8,9 @@ function App() {
   const [data, setData] = useState(null);
   const [cafilter, setCafilter] = useState("All"); // this is the product_name filter
   const [theState, setTheState] = useState("All");
+  const [theCity, setTheCity] = useState("All");
 
+  // load the original data
   useEffect(() => {
     async function getData() {
       try {
@@ -55,7 +57,6 @@ function App() {
   // call the states and city functions.
   const states = Array.from(getState(data, "state"));
   const cities = Array.from(getState(data, "city"));
-  console.log(states, cities);
 
   // handle the product_name filter
   const handleChange = (event) => {
@@ -73,6 +74,15 @@ function App() {
     setTheState(event.target.value);
     if (event.target.value !== "All") {
       const b = data.filter((item) => item.address.state == event.target.value);
+      setData(b);
+    }
+  };
+
+  // handle the city filter
+  const handleCity = (event) => {
+    setTheCity(event.target.value);
+    if (event.target.value !== "All") {
+      const b = data.filter((item) => item.address.city == event.target.value);
       setData(b);
     }
   };
@@ -101,7 +111,15 @@ function App() {
               ))}
             </select>
           </form>
-          <label>City</label>
+          <form>
+            <label>City</label>
+            <select value={theCity} onChange={handleCity}>
+              <option value="all">All</option>
+              {cities.map((x) => (
+                <option value={x}>{x}</option>
+              ))}
+            </select>
+          </form>
         </div>
         <div>
           <h1>Edvora</h1>
