@@ -8,9 +8,11 @@ const SingleCategory = ({ category, data }) => {
       {category}
 
       <hr />
-      {filtedData.map((product) => (
-        <ProductCard productData={product} />
-      ))}
+      <div className="category">
+        {filtedData.map((product) => (
+          <ProductCard productData={product} />
+        ))}
+      </div>
     </div>
   );
 };

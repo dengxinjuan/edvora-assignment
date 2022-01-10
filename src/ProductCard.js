@@ -14,7 +14,7 @@ const ProductCard = ({ productData }) => {
       </p>
       {d}
 
-      <img src={productData.image} alt="image" />
+      <img src={productData.image} alt="image" className="photo" />
 
       <p>{productData.discription}</p>
     </div>

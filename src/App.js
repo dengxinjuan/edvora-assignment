@@ -88,51 +88,49 @@ function App() {
   };
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <div>
-          Filters
-          <hr />
-          <form>
-            <label>Products</label>
-            <select value={cafilter} onChange={handleChange}>
-              <option value="All">All</option>
-              {category.map((x) => (
-                <option value={x}>{x}</option>
-              ))}
-            </select>
-          </form>
-          <form>
-            <label>State</label>
-            <select value={theState} onChange={handleState}>
-              <option value="all">All</option>
-              {states.map((x) => (
-                <option value={x}>{x}</option>
-              ))}
-            </select>
-          </form>
-          <form>
-            <label>City</label>
-            <select value={theCity} onChange={handleCity}>
-              <option value="all">All</option>
-              {cities.map((x) => (
-                <option value={x}>{x}</option>
-              ))}
-            </select>
-          </form>
-        </div>
-        <div>
-          <h1>Edvora</h1>
-          <h2>Product</h2>
-          <h2>
+    <div className="front">
+      <div>
+        Filters
+        <hr />
+        <form>
+          <label>Products</label>
+          <select value={cafilter} onChange={handleChange}>
+            <option value="All">All</option>
             {category.map((x) => (
-              <p id={x}>
-                <SingleCategory category={x} data={data} />
-              </p>
+              <option value={x}>{x}</option>
             ))}
-          </h2>
-        </div>
-      </header>
+          </select>
+        </form>
+        <form>
+          <label>State</label>
+          <select value={theState} onChange={handleState}>
+            <option value="all">All</option>
+            {states.map((x) => (
+              <option value={x}>{x}</option>
+            ))}
+          </select>
+        </form>
+        <form>
+          <label>City</label>
+          <select value={theCity} onChange={handleCity}>
+            <option value="all">All</option>
+            {cities.map((x) => (
+              <option value={x}>{x}</option>
+            ))}
+          </select>
+        </form>
+      </div>
+      <div>
+        <h1>Edvora</h1>
+        <h2>Product</h2>
+        <p>
+          {category.map((x) => (
+            <p id={x}>
+              <SingleCategory category={x} data={data} />
+            </p>
+          ))}
+        </p>
+      </div>
     </div>
   );
 }
