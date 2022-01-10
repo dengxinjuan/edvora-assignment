@@ -46,6 +46,7 @@ function App() {
           <hr />
           <label>Products</label>
           <select>
+            <option>All</option>
             {category.map((x) => (
               <option>{x}</option>
             ))}
@@ -58,7 +59,7 @@ function App() {
           <h2>Product</h2>
           <h2>
             {category.map((x) => (
-              <p>
+              <p id={x}>
                 <SingleCategory category={x} data={data} />
               </p>
             ))}

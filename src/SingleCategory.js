@@ -1,3 +1,5 @@
+import ProductCard from "./ProductCard";
+
 const SingleCategory = ({ category, data }) => {
   const filtedData = data.filter((x) => x.product_name == category);
   console.log(filtedData);
@@ -6,7 +8,9 @@ const SingleCategory = ({ category, data }) => {
       {category}
 
       <hr />
-      {filtedData[0].brand_name}
+      {filtedData.map((product) => (
+        <ProductCard productData={product} />
+      ))}
     </div>
   );
 };
