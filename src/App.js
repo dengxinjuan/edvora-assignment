@@ -120,7 +120,7 @@ function App() {
       </div>
       <div>
         <h1>Edvora</h1>
-        <h2>Product</h2>
+        <h2 className="products-title">Products</h2>
         <p>
           {category.map((x) => (
             <p id={x}>
