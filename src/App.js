@@ -89,31 +89,29 @@ function App() {
 
   return (
     <div className="front">
-      <div>
-        Filters
+      <div className="filter-block">
+        <h2>Filters</h2>
+
         <hr />
-        <form>
-          <label>Products</label>
+        <form className="form">
           <select value={cafilter} onChange={handleChange}>
-            <option value="All">All</option>
+            <option value="All"> Products</option>
             {category.map((x) => (
               <option value={x}>{x}</option>
             ))}
           </select>
         </form>
-        <form>
-          <label>State</label>
+        <form className="form">
           <select value={theState} onChange={handleState}>
-            <option value="all">All</option>
+            <option value="all">State</option>
             {states.map((x) => (
               <option value={x}>{x}</option>
             ))}
           </select>
         </form>
-        <form>
-          <label>City</label>
+        <form className="form">
           <select value={theCity} onChange={handleCity}>
-            <option value="all">All</option>
+            <option value="all">City</option>
             {cities.map((x) => (
               <option value={x}>{x}</option>
             ))}

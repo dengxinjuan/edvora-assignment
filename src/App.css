@@ -29,6 +29,7 @@ h1 {
 .photo {
   height: 70px;
   width: 70px;
+  padding: 20px;
 }
 /**front page display**/
 .front {
@@ -36,4 +37,98 @@ h1 {
   flex-direction: row;
   align-items: flex-start;
   gap: 41px;
+}
+
+/**** product card detail starts here*/
+.product-card {
+  width: 250px;
+  height: 160px;
+  margin: 20px;
+  background: #232323;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 4.68775px;
+  text-align: left;
+}
+
+.product-block {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: space-around;
+  height: 88px;
+}
+
+.align-product {
+  text-align: left;
+}
+
+.product-card p {
+  color: rgba(255, 255, 255, 0.6);
+  font-family: SF Pro Display;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 16px;
+}
+.product-card h3 {
+  font-family: SF Pro Display;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 18px;
+  color: #ffffff;
+}
+
+.product-card h4 {
+  font-family: SF Pro Display;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 16px;
+  color: #ffffff;
+}
+
+.product-detail {
+  display: flex;
+  flex-direction: row;
+  padding-top: 0%;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  height: 25px;
+  justify-content: space-around;
+}
+
+/*** filter block start here*/
+
+.filter-block {
+  width: 228px;
+  height: 300px;
+  background-color: #131313;
+  border-radius: 15px;
+  padding: 25px;
+  margin: 41px;
+}
+
+/****form***/
+.form select {
+  width: 168.45px;
+  height: 37.5px;
+
+  background: #232323;
+  border-radius: 4.68775px;
+  color: #ffffff;
+  margin: 10px;
+}
+
+.filter-block h2 {
+  font-family: SF Pro Display;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 24px;
+  /* identical to box height */
+
+  color: #a5a5a5;
 }
