@@ -58,6 +58,7 @@ h1 {
   align-items: center;
   align-content: space-around;
   height: 88px;
+  box-sizing: border-box;
 }
 
 .align-product {
@@ -120,6 +121,7 @@ h1 {
   border-radius: 4.68775px;
   color: #ffffff;
   margin: 10px;
+  border: transparent;
 }
 
 .filter-block h2 {
