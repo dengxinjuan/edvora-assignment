@@ -2,6 +2,10 @@
 
 https://acidic-apples.surge.sh/
 
+### It also can be found by netlify ( continuously building)
+
+https://gracious-hamilton-0f8f51.netlify.app/
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
